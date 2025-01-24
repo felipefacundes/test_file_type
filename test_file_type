@@ -2,6 +2,23 @@
 # License: GPLv3
 # Credits: Felipe Facundes
 
+: <<'DOCUMENTATION'
+The test_file_type script is a versatile and multilingual utility designed to analyze and report 
+detailed information about a given file. This tool can identify various file types, 
+including directories, symbolic links, pipes, character/block devices, sockets, and regular files. 
+It also provides specific details for images, audio, video, PDFs, and compressed files.
+
+## Features
+
+- Multilingual Support: Messages are provided in English, Portuguese, French, and German based on system language.
+- Detailed File Analysis:
+  - Identifies file types such as directories, symbolic links, and pipes.
+  - Extracts metadata for media files (images, audio, video).
+  - Counts pages for PDF documents.
+  - Calculates uncompressed sizes for compressed files.
+- Integration: Functions seamlessly within the `shell_utils` framework, enhancing user productivity.
+DOCUMENTATION
+
 # Define multilingual messages
 file="${1##*/}"
 declare -A MESSAGES
